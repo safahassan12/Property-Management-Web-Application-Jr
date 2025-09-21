@@ -1,4 +1,4 @@
-# Real Estate Management System
+#  Property Management System
 
 ## Overview
 A front-end web application for managing properties, tenants, owners, and maintenance requests.  
@@ -51,5 +51,6 @@ The project is built using **HTML, CSS, and JavaScript** with **Local Storage** 
 ## Notes
 
 This project is front-end only (no backend).
+
 
 All data is stored locally in the browser using Local Storage.
