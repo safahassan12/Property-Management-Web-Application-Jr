@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Tajawal:wght@400;500;700&family=Almarai:wght@400;700&display=swap');
+
+    body {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+       font-family:'Cairo', 'Tajawal', 'Almarai', sans-serif;
+
+    }
+
+    .logo {
+      max-width: 250px;
+      width: 70%;
+      margin-bottom: 15px;
+    }
+
+    .company-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2e348f; 
+      margin-bottom: 5px;
+    }
+
+    .sub-title {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #2e348f; 
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 25px;
+    }
+
+    .btn:hover {
+      background-color: #1f2360;
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .company-name {
+        font-size: 20px;
+      }
+      .sub-title {
+        font-size: 14px;
+      }
+      .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .company-name {
+        font-size: 18px;
+      }
+      .sub-title {
+        font-size: 13px;
+      }
+      .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  

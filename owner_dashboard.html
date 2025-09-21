@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم المالك</title>
+  <link rel="stylesheet" href="owner_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="header">
+    لوحة تحكم المالك<i class="fas fa-house-user"></i>
+    <a href="index.html" onclick="logout()"> <i class="fas fa-sign-out-alt"></i></a>
+  </div>
+
+  <div class="sidebar">
+    <a href="#add-property">نشر عقار جديد</a>
+    <a href="#view-requests">إدارة طلبات المعاينة</a>
+    <a href="#track-contracts">متابعة العقود</a>
+    <a href="#renew-requests">طلبات تجديد العقد</a>
+    <a href="#maintenance-eval">تقييم الصيانة</a>
+  </div>
+
+  <div class="main-content">
+
+    <div class="card" id="add-property">
+      <h3>نشر عقار جديد</h3>
+      <input type="text" id="propertyName" placeholder="اسم العقار">
+      <input type="text" id="propertyLocation" placeholder="الموقع">
+      <input type="number" id="propertyRooms" placeholder="عدد الغرف">
+      <button onclick="addProperty()">نشر العقار</button>
+      <div id="propertyList"></div>
+    </div>
+
+    <div class="card" id="view-requests">
+      <h3>إدارة طلبات المعاينة</h3>
+      <button onclick="viewRequests()">عرض الطلبات</button>
+      <div id="requestsList"></div>
+    </div>
+
+    <div class="card" id="track-contracts">
+      <h3>متابعة العقود</h3>
+      <button onclick="viewContracts()">عرض العقود</button>
+      <div id="ownerContractsList"></div>
+    </div>
+
+    <div class="card" id="renew-requests">
+      <h3>طلبات تجديد العقد</h3>
+      <button onclick="viewRenewRequests()">عرض الطلبات</button>
+      <div id="renewRequestsList"></div>
+    </div>
+
+    <div class="card" id="maintenance-eval">
+      <h3>تقييم خدمة الصيانة</h3>
+      <textarea id="maintenanceFeedback" placeholder="أدخل تقييمك للخدمة"></textarea>
+      <button onclick="submitFeedback()">إرسال التقييم</button>
+      <div id="feedbackList"></div>
+    </div>
+
+  </div>
+
+  <script src="owner_script.js"></script>
+</body>
+</html>

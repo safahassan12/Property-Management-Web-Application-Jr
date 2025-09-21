@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم المستأجر</title>
+  <link rel="stylesheet" href="tenant_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="header">
+    لوحة تحكم المستأجر<i class="fas fa-user-tie"></i></i>
+    <a href="index.html" onclick="logout()"> <i class="fas fa-sign-out-alt"></i> </a>
+  </div>
+
+  <div class="sidebar">
+    <a href="#view-properties">معاينة الشقق</a>
+    <a href="#schedule">جدولة المعاينة</a>
+    <a href="#upload-docs">رفع المستندات</a>
+    <a href="#maintenance">طلب صيانة</a>
+    <a href="#contracts">عرض العقود والفواتير</a>
+    <a href="#renew">تجديد العقد</a>
+  </div>
+
+  <div class="main-content">
+
+    <div class="card" id="view-properties">
+      <h3>معاينة الشقق المتاحة</h3>
+      <p>يمكنك هنا مشاهدة كل الشقق المتاحة للإيجار.</p>
+      <button onclick="showProperties()">عرض الشقق</button>
+      <div id="propertiesList"></div>
+    </div>
+
+    <div class="card" id="schedule">
+      <h3>جدولة معاينة</h3>
+      <p>اختر الموعد المناسب لمعاينة الشقة.</p>
+      <input type="date" id="visitDate">
+      <input type="time" id="visitTime">
+      <button onclick="scheduleVisit()">جدولة الآن</button>
+    </div>
+
+    <div class="card" id="upload-docs">
+      <h3>رفع المستندات</h3>
+      <p>قم برفع المستندات المطلوبة للعقد.</p>
+      <input type="file" id="uploadDocs">
+      <button onclick="uploadDocument()">رفع المستند</button>
+    </div>
+
+    <div class="card" id="maintenance">
+      <h3>طلب صيانة</h3>
+      <textarea id="issue" placeholder="صف المشكلة"></textarea>
+      <input type="file" id="issueFile">
+      <button onclick="sendMaintenanceRequest()">طلب صيانة</button>
+      <div id="maintenanceList"></div>
+    </div>
+
+    <div class="card" id="contracts">
+      <h3>عرض العقود والفواتير</h3>
+      <button onclick="showContracts()">عرض العقود والفواتير</button>
+      <div id="contractsList"></div>
+    </div>
+
+    <div class="card" id="renew">
+      <h3>تجديد العقد</h3>
+      <button onclick="renewContract()">تجديد العقد</button>
+    </div>
+
+  </div>
+
+  <script src="tenant_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم مسؤول المدفوعات</title>
+  <link rel="stylesheet" href="payment_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="header">
+    لوحة تحكم مسؤول المدفوعات<i class="fas fa-credit-card"></i>
+    <a href="index.html" onclick="logout()"><i class="fas fa-sign-out-alt"></i> </a>
+  </div>
+
+  <div class="sidebar">
+    <a href="#track-payments">تتبع المدفوعات</a>
+    <a href="#add-fine">إضافة غرامة</a>
+    <a href="#generate-invoices">إنشاء كشوفات الحساب</a>
+    <a href="#overdue-payments">المدفوعات المتأخرة</a>
+  </div>
+
+  <div class="main-content">
+
+    <div class="card" id="track-payments">
+      <h3>تتبع المدفوعات</h3>
+      <button onclick="showPayments()">عرض المدفوعات</button>
+      <div id="paymentsList"></div>
+    </div>
+
+    <div class="card" id="add-fine">
+      <h3>إضافة غرامة</h3>
+      <input type="text" id="fineTenant" placeholder="اسم المستأجر">
+      <input type="number" id="fineAmount" placeholder="المبلغ">
+      <button onclick="addFine()">إضافة الغرامة</button>
+    </div>
+
+    <div class="card" id="generate-invoices">
+      <h3>إنشاء كشوفات الحساب الشهرية</h3>
+      <button onclick="generateInvoices()">إنشاء الكشوفات</button>
+      <div id="invoiceList"></div>
+    </div>
+
+    <div class="card" id="overdue-payments">
+      <h3>المدفوعات المتأخرة</h3>
+      <button onclick="showOverduePayments()">عرض المتأخرات</button>
+      <div id="overdueList"></div>
+    </div>
+
+  </div>
+
+  <script src="payment_script.js"></script>
+
+</body>
+</html>

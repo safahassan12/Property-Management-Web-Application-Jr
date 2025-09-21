@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم الصيانة والفنيين</title>
+  <link rel="stylesheet" href="maintenance_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="header">
+  لوحة تحكم الصيانة والفنيين<i class="fas fa-tools"></i>
+  <a href="index.html" onclick="logout()"> <i class="fas fa-sign-out-alt"></i></a>
+</div>
+
+<div class="sidebar">
+  <a href="#view-requests">عرض طلبات الصيانة</a>
+  <a href="#assign-technician">تعيين فني</a>
+  <a href="#schedule-visit">جدولة زيارة</a>
+  <a href="#upload-report">رفع تقرير الصيانة</a>
+</div>
+
+<div class="main-content">
+
+  <div class="card" id="view-requests">
+    <h3>طلبات الصيانة</h3>
+    <button onclick="showRequests()">عرض الطلبات</button>
+    <div id="requestsList"></div>
+  </div>
+
+  <div class="card" id="assign-technician">
+    <h3>تعيين فني</h3>
+    <select id="technicianSelect">
+      <option value="">اختر الفني</option>
+      <option value="فني 1">فني 1</option>
+      <option value="فني 2">فني 2</option>
+    </select>
+    <input type="number" id="assignRequestId" placeholder="رقم الطلب">
+    <button onclick="assignTechnician()">تعيين الفني</button>
+  </div>
+
+  <div class="card" id="schedule-visit">
+    <h3>جدولة زيارة</h3>
+    <input type="number" id="visitRequestId" placeholder="رقم الطلب">
+    <input type="date" id="visitDate">
+    <button onclick="scheduleVisit()">تحديد موعد الزيارة</button>
+  </div>
+
+  <div class="card" id="upload-report">
+    <h3>رفع تقرير الصيانة</h3>
+    <input type="number" id="reportRequestId" placeholder="رقم الطلب">
+    <textarea id="reportText" placeholder="أدخل تقرير الصيانة"></textarea>
+    <button onclick="uploadReport()">رفع التقرير</button>
+    <div id="reportList"></div>
+  </div>
+
+</div>
+
+<script src="maintenance_script.js"></script>
+</body>
+</html>
