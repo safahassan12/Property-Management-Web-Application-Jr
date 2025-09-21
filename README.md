@@ -28,7 +28,7 @@ The project is built using **HTML, CSS, and JavaScript** with **Local Storage** 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/real-estate-system.git
+   git clone [https://github.com/your-username/real-estate-system.git](https://safahassan12.github.io/Property-Management-Web-Application-Jr/)
 2. Navigate to the project folder.
 
 ## Usage
@@ -54,3 +54,4 @@ This project is front-end only (no backend).
 
 
 All data is stored locally in the browser using Local Storage.
+
